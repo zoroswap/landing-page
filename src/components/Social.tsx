@@ -8,8 +8,8 @@ const Social = () => {
         <div className='flex gap-10 flex-col md:flex-row'>
           <a
             href='https://x.com/zoroswap'
+            rel='noopener noreferrer nofollow'
             target='_blank'
-            rel='noopener noreferrer'
             className='text-slate-300 hover:text-white transition-colors'
             title='X Account of ZoroSwap'
           >
@@ -24,8 +24,8 @@ const Social = () => {
 
           <a
             href='https://t.me/+KyKHHuIxxPdmOTky'
+            rel='noopener noreferrer nofollow'
             target='_blank'
-            rel='noopener noreferrer'
             className='text-slate-300 hover:text-white transition-colors'
             title='Telegram Group for ZoroSwap'
           >
@@ -46,8 +46,8 @@ const Social = () => {
         <div className='flex gap-10'>
           <a
             href='https://github.com/zoroswap'
+            rel='noopener noreferrer nofollow'
             target='_blank'
-            rel='noopener noreferrer'
             className='text-slate-300 hover:text-white transition-colors'
             title='ZoroSwap on GitHub'
           >
