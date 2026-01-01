@@ -1,6 +1,6 @@
 const Social = () => {
   return (
-    <div className='container flex flex-col md:flex-row gap-10 py-10'>
+    <div className='container flex flex-col md:flex-row gap-10 py-10' id='socials'>
       <div className='text-left flex-grow justify-between items-center flex gap-10 border-1 border-dashed border-foreground/20 p-10 rounded-[30px]'>
         <h2 className='opacity-50'>
           Join our<br />community
