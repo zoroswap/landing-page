@@ -10,7 +10,7 @@ const Header = () => {
       <nav className='flex gap-8 cal-sans'>
         <a href='#socials'>Socials</a>
         <a
-          rel='noopener noreferrer nofollow'
+          rel='noopener noreferrer'
           target='_blank'
           href='https://paragraph.com/@zoroswap'
         >

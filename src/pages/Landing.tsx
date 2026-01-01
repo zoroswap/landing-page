@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import Quote from '../components/Quote';
 import Spacer from '../components/Spacer';
 import Summary from '../components/Summary';
 
@@ -8,6 +9,7 @@ const Landing = () => {
       <Hero />
       <Spacer />
       <Summary />
+      <Quote />
     </main>
   );
 };
