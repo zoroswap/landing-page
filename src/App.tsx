@@ -1,10 +1,10 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Landing from '../pages/Landing';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Social from './components/Social';
 import Spacer from './components/Spacer';
+import Landing from './pages/Landing';
 import MediaKit from './pages/MediaKit';
 import NotFound from './pages/NotFound';
 import { ThemeProvider } from './providers/ThemeProvider';
