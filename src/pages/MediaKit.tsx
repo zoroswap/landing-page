@@ -129,7 +129,7 @@ function MediaKit() {
                 <div className={'gap-2 flex flex-col items-center justify-center'}>
                   <img
                     src='/media-kit/zoroswap-screenshot-light.png'
-                    alt='Zoro logo'
+                    alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
                     className='h-64 w-64 sm:h-64 sm:w-64'
                   />
@@ -147,7 +147,7 @@ function MediaKit() {
                 <div className='gap-2 flex flex-col items-center justify-center'>
                   <img
                     src='/media-kit/zoroswap-screenshot-dark.png'
-                    alt='Zoro logo'
+                    alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
                     className='h-64 w-64 sm:h-64 sm:w-64'
                   />

@@ -33,7 +33,7 @@ const Quote = () => {
             <img
               className='w-12 h-12 rounded-full'
               src='./zoro-logo.svg'
-              alt='profile picture'
+              alt='ZoroSwap logo'
             />
             <div className='flex items-center divide-x rtl:divide-x-reverse divide-default'>
               <cite className='ps-3 text-sm text-body'>
