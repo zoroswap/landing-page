@@ -113,7 +113,7 @@ function MediaKit() {
             <p className='flex gap-4 py-4 flex flex-col'>
               Primary Orange
               <span className='bg-primary inline-block text-white font-semibold p-2 rounded'>
-                #ff5601
+                #ff5501
               </span>
               <br />
               Secondary Grey
