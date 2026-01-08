@@ -108,7 +108,7 @@ function MediaKit() {
               </div>
             </p>
             <h2 className='text-xl sm:text-2xl font-bold'>
-              Color Schema
+              Color Scheme
             </h2>
             <p className='flex gap-4 py-4 flex flex-col'>
               Primary Orange
