@@ -24,7 +24,7 @@ const Quote = () => {
           </svg>
           <blockquote>
             <p className='text-xl italic tracking-tight text-heading'>
-              "Zoroswap is set to become the central liquidity hub on Miden, combining the
+              "ZoroSwap is set to become the central liquidity hub on Miden, combining the
               best of both passive and active market-making paradigms. The project is
               proudly supported by a development grant from Miden."
             </p>
@@ -44,7 +44,7 @@ const Quote = () => {
                   href='https://paragraph.com/@zoroswap/introducing-zoroswap'
                   className='font-semibold text-primary underline'
                 >
-                  Introducing Zoroswap
+                  Introducing ZoroSwap
                 </a>
               </cite>
             </div>

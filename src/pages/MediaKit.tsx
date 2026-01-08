@@ -53,7 +53,7 @@ function MediaKit() {
               Mission Statement
             </h2>
             <p>
-              Zoroswap is set to become the central liquidity hub on Miden, combining the
+              ZoroSwap is set to become the central liquidity hub on Miden, combining the
               best of both passive and active market-making paradigms.
             </p>
             <p>
