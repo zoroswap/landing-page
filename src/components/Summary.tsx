@@ -35,18 +35,20 @@ const Summary = () => {
         </a>
       </div>
       <div className='lg:hidden border-1 overflow-hidden rounded-2xl border-foreground/20 border-dashed'>
-        <img src='./app.png' title='Screenshot of zoro app' className='dark:hidden' />
+        <img src='./app.png' alt='ZoroSwap trading interface' title='Screenshot of the ZoroSwap app' className='dark:hidden' />
         <img
           src='./dark_theme_app.png'
-          title='Screenshot of zoro app'
+          alt='ZoroSwap trading interface'
+          title='Screenshot of the ZoroSwap app'
           className='hidden dark:block'
         />
       </div>
       <div className='hidden lg:block absolute z-1 right-[-30%] w-[640px] top-[70%] translate-x-[-50%] translate-y-[-50%] h-[450px] border-1 border-dashed overflow-hidden rounded-2xl dark:opacity-70 border-foreground/20'>
-        <img src='./app.png' title='Screenshot of zoro app' className='dark:hidden' />
+        <img src='./app.png' alt='ZoroSwap trading interface' title='Screenshot of the ZoroSwap app' className='dark:hidden' />
         <img
           src='./dark_theme_app.png'
-          title='Screenshot of zoro app'
+          alt='ZoroSwap trading interface'
+          title='Screenshot of the ZoroSwap app'
           className='hidden dark:block'
         />
       </div>

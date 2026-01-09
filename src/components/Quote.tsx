@@ -6,25 +6,18 @@ const Quote = () => {
       <Card className='p-10 border-foreground/20 m-0'>
         <figure className='max-w-screen-md mx-auto text-center'>
           <svg
-            className='w-11 h-11 text-heading mb-4 mx-auto opacity-30'
-            aria-hidden='true'
-            xmlns='http://www.w3.org/2000/svg'
-            width='24'
-            height='24'
-            fill='none'
-            viewBox='0 0 24 24'
+              className='w-11 h-11 text-heading mb-4 mx-auto opacity-30'
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              viewBox="-5.0 -10.0 110.0 135.0"
           >
-            <path
-              stroke='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              d='M10 11V8a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4H5m14-6V8a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1Zm0 0v2a4 4 0 0 1-4 4h-1'
-            />
+              <path fill='currentColor' d="m42.848 17.477v34.645c0 22.281-16.176 31.801-29.949 32.32-3.5156 0.13281-6.4102-2.8164-6.4102-6.3359 0-3.3594 2.6172-5.5039 5.8828-6.2852 4.207-1.0039 7.7031-2.2773 10.105-5.125 2.2109-2.6211 3.4453-6.5156 3.6602-12.496l-19.902-0.12891c-1.0742-0.007812-1.9414-0.87891-1.9414-1.9531v-34.645c0-1.0781 0.875-1.9531 1.9531-1.9531h34.645c1.0781 0 1.9531 0.875 1.9531 1.9531z" fill-rule="evenodd"/>
+              <path fill='currentColor' d="m95.672 17.477v34.645c0 22.281-16.176 31.801-29.949 32.32-3.5156 0.13281-6.4102-2.8164-6.4102-6.3359 0-3.3594 2.6172-5.5039 5.8828-6.2852 4.207-1.0039 7.7031-2.2773 10.105-5.125 2.2109-2.6211 3.4453-6.5156 3.6602-12.496l-19.902-0.12891c-1.0742-0.007812-1.9414-0.87891-1.9414-1.9531v-34.645c0-1.0781 0.875-1.9531 1.9531-1.9531h34.645c1.0781 0 1.9531 0.875 1.9531 1.9531z" fill-rule="evenodd"/>
           </svg>
           <blockquote>
             <p className='text-xl italic tracking-tight text-heading'>
-              "Zoroswap is set to become the central liquidity hub on Miden, combining the
+              "ZoroSwap is set to become the central liquidity hub on Miden, combining the
               best of both passive and active market-making paradigms. The project is
               proudly supported by a development grant from Miden."
             </p>
@@ -33,7 +26,7 @@ const Quote = () => {
             <img
               className='w-12 h-12 rounded-full'
               src='./zoro-logo.svg'
-              alt='profile picture'
+              alt='ZoroSwap logo'
             />
             <div className='flex items-center divide-x rtl:divide-x-reverse divide-default'>
               <cite className='ps-3 text-sm text-body'>
@@ -44,7 +37,7 @@ const Quote = () => {
                   href='https://paragraph.com/@zoroswap/introducing-zoroswap'
                   className='font-semibold text-primary underline'
                 >
-                  Introducing Zoroswap
+                  Introducing ZoroSwap
                 </a>
               </cite>
             </div>

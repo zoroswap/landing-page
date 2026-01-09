@@ -53,7 +53,7 @@ function MediaKit() {
               Mission Statement
             </h2>
             <p>
-              Zoroswap is set to become the central liquidity hub on Miden, combining the
+              ZoroSwap is set to become the central liquidity hub on Miden, combining the
               best of both passive and active market-making paradigms.
             </p>
             <p>
@@ -108,12 +108,12 @@ function MediaKit() {
               </div>
             </p>
             <h2 className='text-xl sm:text-2xl font-bold'>
-              Color Schema
+              Color Scheme
             </h2>
             <p className='flex gap-4 py-4 flex flex-col'>
               Primary Orange
               <span className='bg-primary inline-block text-white font-semibold p-2 rounded'>
-                #ff5601
+                #ff5501
               </span>
               <br />
               Secondary Grey
@@ -129,7 +129,7 @@ function MediaKit() {
                 <div className={'gap-2 flex flex-col items-center justify-center'}>
                   <img
                     src='/media-kit/zoroswap-screenshot-light.png'
-                    alt='Zoro logo'
+                    alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
                     className='h-64 w-64 sm:h-64 sm:w-64'
                   />
@@ -147,7 +147,7 @@ function MediaKit() {
                 <div className='gap-2 flex flex-col items-center justify-center'>
                   <img
                     src='/media-kit/zoroswap-screenshot-dark.png'
-                    alt='Zoro logo'
+                    alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
                     className='h-64 w-64 sm:h-64 sm:w-64'
                   />
