@@ -1,6 +1,23 @@
+import { useState } from 'react';
+
 function MediaKit() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+
   return (
     <div className='min-h-screen bg-background text-foreground flex flex-col dotted-bg'>
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div
+          className='fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 cursor-pointer'
+          onClick={() => setLightboxImage(null)}
+        >
+          <img
+            src={lightboxImage}
+            alt='Enlarged view'
+            className='max-w-full max-h-full object-contain'
+          />
+        </div>
+      )}
       <title>MediaKit - ZoroSwap | DeFi on Miden</title>
       <meta
         name='description'
@@ -131,7 +148,8 @@ function MediaKit() {
                     src='/media-kit/zoroswap-screenshot-light.png'
                     alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
-                    className='h-64 w-64 sm:h-64 sm:w-64'
+                    className='h-64 w-64 sm:h-64 sm:w-64 cursor-pointer hover:opacity-80 transition-opacity'
+                    onClick={() => setLightboxImage('/media-kit/zoroswap-screenshot-light.png')}
                   />
                   <p className={'text-center'}>
                     Light Theme<br />
@@ -149,7 +167,8 @@ function MediaKit() {
                     src='/media-kit/zoroswap-screenshot-dark.png'
                     alt='ZoroSwap trading interface screenshot'
                     title='ZoroSwap'
-                    className='h-64 w-64 sm:h-64 sm:w-64'
+                    className='h-64 w-64 sm:h-64 sm:w-64 cursor-pointer hover:opacity-80 transition-opacity'
+                    onClick={() => setLightboxImage('/media-kit/zoroswap-screenshot-dark.png')}
                   />
                   <p className={'text-center'}>
                     Dark Theme<br />
