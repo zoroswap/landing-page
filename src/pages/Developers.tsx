@@ -21,8 +21,8 @@ const inputs = new NoteInputs(
     new Felt(BigInt(0)),
     new Felt(BigInt(0)),
     new Felt(BigInt(0)),
-    userAccountId.suffix(),           // [10] creator suffix
-    userAccountId.prefix(),           // [11] creator prefix
+    userAccountId.suffix(),           // [10] beneficiary suffix
+    userAccountId.prefix(),           // [11] beneficiary prefix
   ])
 );
 
@@ -62,8 +62,8 @@ const DEPOSIT_EXAMPLE = `const inputs = new NoteInputs(
     new Felt(BigInt(p2idTag)),        // [3] p2id tag
     new Felt(BigInt(0)),              // [4-5] padding
     new Felt(BigInt(0)),
-    userAccountId.suffix(),           // [6] creator suffix
-    userAccountId.prefix(),           // [7] creator prefix
+    userAccountId.suffix(),           // [6] beneficiary suffix
+    userAccountId.prefix(),           // [7] beneficiary prefix
   ])
 );
 
@@ -119,8 +119,8 @@ const inputs = new NoteInputs(
     new Felt(BigInt(p2idTag)),        // [7] p2id tag
     new Felt(BigInt(0)),              // [8-9] padding
     new Felt(BigInt(0)),
-    userAccountId.suffix(),           // [10] creator suffix
-    userAccountId.prefix(),           // [11] creator prefix
+    userAccountId.suffix(),           // [10] beneficiary suffix
+    userAccountId.prefix(),           // [11] beneficiary prefix
   ])
 );
 
@@ -421,7 +421,7 @@ function Developers() {
               <li>Create a ZOROSWAP note using the Miden SDK and the instructions on this page</li>
               <li>Sign and submit transaction to blockchain via a wallet</li>
               <li>ZoroSwap server detects the note on-chain and processes the swap</li>
-              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>creatorId</code></li>
+              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>beneficiaryId</code></li>
               <li>The beneficiary needs to claim the P2ID note in their wallet</li>
             </ol>
             <p className='text-sm text-muted-foreground mt-2'>
@@ -435,7 +435,7 @@ function Developers() {
               <li>Wait for block inclusion</li>
               <li>Serialize the note and send it to ZoroSwap API</li>
               <li>ZoroSwap server processes and executes the note</li>
-              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>creatorId</code></li>
+              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>beneficiaryId</code></li>
               <li>The beneficiary needs to claim the P2ID note in their wallet</li>
             </ol>
             <p className='text-sm text-muted-foreground mt-2'>
@@ -531,7 +531,7 @@ function Developers() {
                       The recipient wallet uses this tag to filter and discover incoming notes when syncing.</td>
                   </tr>
                   <tr>
-                    <td className='px-3 py-2'><code>creatorId</code></td>
+                    <td className='px-3 py-2'><code>beneficiaryId</code></td>
                     <td className='px-3 py-2'>AccountId</td>
                     <td className='px-3 py-2'>Split into suffix (first) and prefix (second) Felts.</td>
                   </tr>
@@ -600,13 +600,13 @@ function Developers() {
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>10</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.suffix</td>
-                    <td className='px-3 py-2'>Creator account ID suffix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.suffix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID suffix</td>
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>11</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.prefix</td>
-                    <td className='px-3 py-2'>Creator account ID prefix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.prefix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID prefix</td>
                   </tr>
                 </tbody>
               </table>
@@ -673,13 +673,13 @@ function Developers() {
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>6</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.suffix</td>
-                    <td className='px-3 py-2'>Creator account ID suffix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.suffix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID suffix</td>
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>7</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.prefix</td>
-                    <td className='px-3 py-2'>Creator account ID prefix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.prefix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID prefix</td>
                   </tr>
                 </tbody>
               </table>
@@ -751,13 +751,13 @@ function Developers() {
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>10</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.suffix</td>
-                    <td className='px-3 py-2'>Creator account ID suffix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.suffix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID suffix</td>
                   </tr>
                   <tr>
                     <td className='px-3 py-2'>11</td>
-                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.prefix</td>
-                    <td className='px-3 py-2'>Creator account ID prefix</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.prefix</td>
+                    <td className='px-3 py-2'>Beneficiary account ID prefix</td>
                   </tr>
                 </tbody>
               </table>
@@ -839,7 +839,7 @@ function Developers() {
 
             <h3 className='text-lg font-semibold mt-10'>Receiving Result Notes</h3>
             <p>
-              After successful execution, ZoroSwap sends a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id)</a> note back to the account specified as creator.
+              After successful execution, ZoroSwap sends a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id)</a> note back to the account specified as beneficiary.
               This note contains the resulting tokens, it needs to be claimed by the user. The claim process will incur user fees in future versions of Miden, so should not be done without the users acknowledgment.
               On a high-level the process is:
             </p>
