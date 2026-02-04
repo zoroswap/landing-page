@@ -19,10 +19,10 @@ const inputs = new NoteInputs(
     new Felt(BigInt(p2idTag)),        // [5] p2id tag
     new Felt(BigInt(0)),              // [6-9] padding
     new Felt(BigInt(0)),
-    new Felt(BigInt(0)),
-    new Felt(BigInt(0)),
     userAccountId.suffix(),           // [10] beneficiary suffix
     userAccountId.prefix(),           // [11] beneficiary prefix
+    userAccountId.suffix(),           // [10] creator suffix
+    userAccountId.prefix(),           // [11] creator prefix
   ])
 );
 
@@ -421,8 +421,9 @@ function Developers() {
               <li>Create a ZOROSWAP note using the Miden SDK and the instructions on this page</li>
               <li>Sign and submit transaction to blockchain via a wallet</li>
               <li>ZoroSwap server detects the note on-chain and processes the swap</li>
-              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>beneficiaryId</code></li>
-              <li>The beneficiary needs to claim the P2ID note in their wallet</li>
+              <li>Result note, a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id) note</a>, is sent back to the specified <code>beneficiaryId</code> (failed swaps will return the input asset to the <code>creatorId</code> instead</li>
+              <li>The beneficiary (or creator) needs to claim the P2ID note in their wallet</li>
+              <li>Should the swap fail P2ID gets sent back to the creator</li>
             </ol>
             <p className='text-sm text-muted-foreground mt-2'>
               No backend API call is required for swaps. Our server monitors the chain for notes tagged with the pool account ID.
@@ -536,6 +537,11 @@ function Developers() {
                     <td className='px-3 py-2'>Split into suffix (first) and prefix (second) Felts.</td>
                   </tr>
                   <tr>
+                    <td className='px-3 py-2'><code>creatorId</code></td>
+                    <td className='px-3 py-2'>AccountId</td>
+                    <td className='px-3 py-2'>Split into suffix (first) and prefix (second) Felts.</td>
+                  </tr>
+                  <tr>
                     <td className='px-3 py-2'><code>faucetId</code></td>
                     <td className='px-3 py-2'>AccountId</td>
                     <td className='px-3 py-2'>Token identifier. Split into suffix and prefix Felts.</td>
@@ -607,6 +613,16 @@ function Developers() {
                     <td className='px-3 py-2'>11</td>
                     <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>beneficiaryId</code></a>.prefix</td>
                     <td className='px-3 py-2'>Beneficiary account ID prefix</td>
+                  </tr>
+                  <tr>
+                    <td className='px-3 py-2'>10</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.suffix</td>
+                    <td className='px-3 py-2'>Creator account ID suffix</td>
+                  </tr>
+                  <tr>
+                    <td className='px-3 py-2'>11</td>
+                    <td className='px-3 py-2'><a href='#common-parameters' className='text-primary hover:text-foreground'><code>creatorId</code></a>.prefix</td>
+                    <td className='px-3 py-2'>Creator account ID prefix</td>
                   </tr>
                 </tbody>
               </table>
@@ -839,7 +855,7 @@ function Developers() {
 
             <h3 className='text-lg font-semibold mt-10'>Receiving Result Notes</h3>
             <p>
-              After successful execution, ZoroSwap sends a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id)</a> note back to the account specified as beneficiary.
+              After successful execution, ZoroSwap sends a <a href='https://docs.miden.xyz/quick-start/notes' target='_blank' rel='noopener noreferrer' className='text-primary hover:text-foreground'>P2ID (pay-to-id)</a> note back to the account specified as beneficiary. In case of a failed swap a P2ID with the input asset is sent to the note creator account.
               This note contains the resulting tokens, it needs to be claimed by the user. The claim process will incur user fees in future versions of Miden, so should not be done without the users acknowledgment.
               On a high-level the process is:
             </p>
