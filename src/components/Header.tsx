@@ -8,7 +8,7 @@ const Header = () => {
         <img src='/zoro-logo-full.svg' title='Zoro logo' alt='Zoro logo' />
       </Link>
       <nav className='flex gap-8 cal-sans'>
-        <a href='#socials'>Socials</a>
+        <a href='/#socials'>Socials</a>
         <a
           rel='noopener noreferrer'
           target='_blank'
@@ -17,7 +17,7 @@ const Header = () => {
           Publications
         </a>
         <Link to='/media-kit'>Media Kit</Link>
-        <Link to='#' className='opacity-50 cursor-auto'>Developers</Link>
+        <Link to='/developer-integration'>Developers</Link>
       </nav>
       <div className='flex gap-4 items-center'>
         <ModeToggle />

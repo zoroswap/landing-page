@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Social from './components/Social';
 import Spacer from './components/Spacer';
+import Developers from './pages/Developers';
 import Landing from './pages/Landing';
 import MediaKit from './pages/MediaKit';
 import NotFound from './pages/NotFound';
@@ -14,6 +15,7 @@ function AppRouter() {
     <Routes>
       <Route path='/' element={<Landing />} />
       <Route path='/media-kit' element={<MediaKit />} />
+      <Route path='/developer-integration' element={<Developers />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
