@@ -10,12 +10,18 @@ import MediaKit from './pages/MediaKit';
 import NotFound from './pages/NotFound';
 import { ThemeProvider } from './providers/ThemeProvider';
 
+function ExternalRedirect({ to }: { to: string }) {
+  window.location.replace(to);
+  return null;
+}
+
 function AppRouter() {
   return (
     <Routes>
       <Route path='/' element={<Landing />} />
       <Route path='/media-kit' element={<MediaKit />} />
       <Route path='/developer-integration' element={<Developers />} />
+      <Route path='/faucet' element={<ExternalRedirect to='https://app.zoroswap.com/faucet' />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   );
