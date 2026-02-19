@@ -24,11 +24,13 @@ function AppRouter() {
 function App() {
   return (
     <ThemeProvider storageKey='vite-ui-theme'>
-      <Header />
-      <AppRouter />
-      <Spacer />
-      <Social />
-      <Footer />
+      <div className='min-h-screen flex flex-col'>
+        <Header />
+        <AppRouter />
+        <Spacer />
+        <Social />
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 }
